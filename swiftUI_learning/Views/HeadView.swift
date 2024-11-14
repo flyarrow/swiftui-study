@@ -9,12 +9,13 @@ import SwiftUI
 
 
 struct HeadView: View {
-    let exerciseName: String
+    let titleText: String
     var body: some View {
         VStack {
-            Text(exerciseName)
-                .font(.largeTitle)
+            Text(titleText)
+                .font(.system(size: 60))
             HStack {
+                Image(systemName: "hand.raised")
                 Image(systemName: "1.circle")
                 Image(systemName: "2.circle")
                 Image(systemName: "3.circle")
@@ -26,5 +27,5 @@ struct HeadView: View {
 }
 
 #Preview {
-    HeadView(exerciseName: "run")
+    HeadView(titleText: "run")
 }

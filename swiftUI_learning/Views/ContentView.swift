@@ -14,7 +14,7 @@ struct ContentView: View {
             ForEach(0..<4) { index in
                 ExerciseView(index: index)
             }
-            Text("Excercise 2")
+            SuccessView()
             
         }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
