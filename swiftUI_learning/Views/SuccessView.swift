@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SuccessView: View {
     let message = NSLocalizedString("Good job completing all four exercises!\nRemember tomorrow's another day.\nSo et well and get some rest.", comment: "success to exerciser")
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var selectedTab: Int
     var body: some View {
 
         VStack {
@@ -29,7 +31,10 @@ struct SuccessView: View {
 
             }
             Spacer()
-            Button(NSLocalizedString("Continue", comment: "continue button")){}
+            Button(NSLocalizedString("Continue", comment: "continue button")){
+                presentationMode.wrappedValue.dismiss()
+                selectedTab = 9
+            }
                 .padding()
                 .font(.largeTitle)
             
@@ -40,5 +45,5 @@ struct SuccessView: View {
 }
 
 #Preview {
-    SuccessView()
+    SuccessView(selectedTab: .constant(3))
 }
