@@ -6,13 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		8172E2B32CE4944900A045B5 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8172E2AF2CE4944900A045B5 /* 1.mp4 */; };
-		8172E2B42CE4944900A045B5 /* 3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8172E2B12CE4944900A045B5 /* 3.mp4 */; };
-		8172E2B52CE4944900A045B5 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8172E2B02CE4944900A045B5 /* 2.mp4 */; };
-		8172E2B62CE4944900A045B5 /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8172E2B22CE4944900A045B5 /* 4.mp4 */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		8172E28A2CE454A900A045B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,10 +27,6 @@
 		8172E2792CE454A700A045B5 /* swiftUI_learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftUI_learning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8172E2892CE454A900A045B5 /* swiftUI_learningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftUI_learningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8172E2932CE454A900A045B5 /* swiftUI_learningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftUI_learningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8172E2AF2CE4944900A045B5 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
-		8172E2B02CE4944900A045B5 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
-		8172E2B12CE4944900A045B5 /* 3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.mp4; sourceTree = "<group>"; };
-		8172E2B22CE4944900A045B5 /* 4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -86,10 +75,6 @@
 		8172E2702CE454A700A045B5 = {
 			isa = PBXGroup;
 			children = (
-				8172E2AF2CE4944900A045B5 /* 1.mp4 */,
-				8172E2B02CE4944900A045B5 /* 2.mp4 */,
-				8172E2B12CE4944900A045B5 /* 3.mp4 */,
-				8172E2B22CE4944900A045B5 /* 4.mp4 */,
 				8172E27B2CE454A700A045B5 /* swiftUI_learning */,
 				8172E28C2CE454A900A045B5 /* swiftUI_learningTests */,
 				8172E2962CE454A900A045B5 /* swiftUI_learningUITests */,
@@ -207,6 +192,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 8172E2702CE454A700A045B5;
 			minimizedProjectReferenceProxies = 1;
@@ -227,10 +213,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8172E2B32CE4944900A045B5 /* 1.mp4 in Resources */,
-				8172E2B42CE4944900A045B5 /* 3.mp4 in Resources */,
-				8172E2B52CE4944900A045B5 /* 2.mp4 in Resources */,
-				8172E2B62CE4944900A045B5 /* 4.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +275,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -356,6 +339,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

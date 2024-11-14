@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct SuccessView: View {
-    let message = """
-        Good job completing all four exercises!
-        Remember tomorrow's another day.
-        So et well and get some rest.
-        """
+    let message = NSLocalizedString("Good job completing all four exercises!\nRemember tomorrow's another day.\nSo et well and get some rest.", comment: "success to exerciser")
     var body: some View {
 
         VStack {
@@ -25,7 +21,7 @@ struct SuccessView: View {
                     .frame(width: 75, height: 75)
                     .padding()
 
-                Text("High Five!")
+                Text(NSLocalizedString("High Five!", comment: "happy ending"))
                     .fontWeight(.bold)
                     .font(.system(size: 30))
                 Text(message).multilineTextAlignment(.center)
@@ -33,7 +29,7 @@ struct SuccessView: View {
 
             }
             Spacer()
-            Button("Continue"){}
+            Button(NSLocalizedString("Continue", comment: "continue button")){}
                 .padding()
                 .font(.largeTitle)
             
