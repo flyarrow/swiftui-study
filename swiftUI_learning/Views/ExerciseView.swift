@@ -14,9 +14,14 @@ struct ExerciseView: View {
     let videoNames = ["1","2","3","4"]
     let index: Int
     let interval: TimeInterval = 30
+    var disableDone = true
     @State private var rating = 0
     @State private var showHistory = false
     @State private var showSuccess = false
+    @State private var timerDone = false
+    @State private var showTimer = false
+    @EnvironmentObject var history: HistoryStore
+
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
     }
@@ -35,24 +40,40 @@ struct ExerciseView: View {
                 else {
                     Text("Could not find \(Exercise.exercises[index].videoName).MP4").foregroundColor(.red)
                 }
-                Text(Date().addingTimeInterval(interval), style: .timer).font(.system(size: 90))
+                
+                
+                
+                
                 HStack(spacing: 100) {
-                    Button("Start Exercise") {}
+                    Button("Start Exercise") {
+                        showTimer.toggle()
+                        }
                     Button("Done") {
+                        history.addDoneExercise(Exercise.exercises[index].exerciseName)
+
+                        timerDone = false
+                        showTimer.toggle()
                         if lastExercise{
                             showSuccess.toggle()
                         } else {
                             selectedTab += 1
                         }
                     }
+                    .disabled(!timerDone)
                     .sheet(isPresented: $showSuccess){
                         SuccessView(selectedTab: $selectedTab)
                     }
+                    
                 }
                 
-                RatingView(rating: $rating).padding(.top)
+                if showTimer {
+                    TimerView(timerDone: $timerDone)
+                }
+                
+                
                 
                 Spacer()
+                RatingView(rating: $rating).padding()
                 Button(NSLocalizedString("History", comment: "view user activity")) { showHistory.toggle() }
                   .padding(.bottom)
                   .sheet(isPresented: $showHistory){
@@ -65,7 +86,8 @@ struct ExerciseView: View {
 
 #Preview {
     //ExerciseView(index: 0)
-    ExerciseView(selectedTab: .constant(3), index: 3)
+    ExerciseView(selectedTab: .constant(0), index: 0)
+        .environmentObject(HistoryStore())
 
 }
 

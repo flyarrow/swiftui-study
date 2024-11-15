@@ -14,13 +14,15 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             WelcomeView(selectedTab: $selectedTab)
                 .tag(9)
-            ForEach(0..<Exercise.exercises.count) { index in
+            ForEach(0 ..< Exercise.exercises.count) { index in
                 ExerciseView(selectedTab: $selectedTab, index: index)
                     .tag(index)
             }
             //SuccessView(selectedTab: $selectedTab)
             
-        }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .environmentObject(HistoryStore())
     }
 }
 
