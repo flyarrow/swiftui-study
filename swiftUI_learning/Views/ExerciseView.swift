@@ -15,7 +15,7 @@ struct ExerciseView: View {
     let index: Int
     let interval: TimeInterval = 30
     var disableDone = true
-    @State private var rating = 0
+    //@AppStorage("rating") private var rating = 0
     @State private var showHistory = false
     @State private var showSuccess = false
     @State private var timerDone = false
@@ -73,7 +73,7 @@ struct ExerciseView: View {
                 
                 
                 Spacer()
-                RatingView(rating: $rating).padding()
+                RatingView(exerciseIndex: index).padding()
                 Button(NSLocalizedString("History", comment: "view user activity")) { showHistory.toggle() }
                   .padding(.bottom)
                   .sheet(isPresented: $showHistory){
